@@ -1,0 +1,40 @@
+﻿@model SmashPoint.Models.Producto
+
+@{
+    ViewData["Title"] = "Escaparate";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2 class="text-center fst-italic">AÑADIR AL CARRITO</h2>
+<hr style="height:4px;background-color: #FF5503; color: transparent;" class="col-1 mx-auto">
+<div class="row">
+    <img src='/img/@Model.Imagen' class="col-lg-5 offset-lg-1 col-12 offset-0" style="border: 2px solid #FF5503;">
+    <div class="col-lg-5 col-12 bg-dark d-flex align-items-center p-3">
+        <div class="mx-auto">
+            <h2 class="text-light text-center">@Model.Descripcion</h2>
+            <h5 class="text-light text-center mt-4 col-10 mx-auto">@Model.Texto</h5>
+            <h5 class="text-light text-center mt-4">Categoria: @Model.Categoria.Descripcion</h5>
+            <h5 class="text-light text-center mt-2">Quedan @Model.Stock Unidades</h5>
+            <h5 class="text-light text-center mt-2">PRECIO: @Model.Precio€</h5>
+            <form asp-action="AgregarCarrito" asp-controller="Escaparate" asp-route-id="@Model.Id" class="row">
+                <button type="submit" class="btn btn-light mt-4 mx-auto col-10" >Añadir al carrito</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div class="row container mt-4 mb-4">
+    <hr />
+    <h3 class="text-center">Fabricado por @Model.Proveedor.Nombre</h3>
+    <hr style="height:4px;background-color: #FF5503; color: transparent;" class="col-1 mx-auto">
+    <div class="row">
+        <div class="col-lg-5 col-10 mx-auto row">
+            <img src='/img/@Model.Proveedor.Imagen' class="col-lg-4 col-10 mx-auto  pb-2">
+            <div class="col-lg-8 col-12 mt-2">
+                <h5 class="text-center">Correo: @Model.Proveedor.Correo</h5>
+                <h5 class="text-center">Telefono: @Model.Proveedor.Telefono</h5>
+                <h5 class="text-center">Ubicacion: @Model.Proveedor.Direccion</h5>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,485 @@
+{
+  "Files": [
+    {
+      "Id": "D:\\EscritorioAntiguo\\git\\SmashPoint\\SmashPoint\\SmashPoint\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\SmashPoint.bundle.scp.css",
+      "PackagePath": "staticwebassets\\SmashPoint.bundle.scp.css"
+    },
+    {
+      "Id": "D:\\EscritorioAntiguo\\git\\SmashPoint\\SmashPoint\\SmashPoint\\wwwroot\\css\\estilos.css",
+      "PackagePath": "staticwebassets\\css\\estilos.css"
+    },
+    {
+      "Id": "D:\\EscritorioAntiguo\\git\\SmashPoint\\SmashPoint\\SmashPoint\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "D:\\EscritorioAntiguo\\git\\SmashPoint\\SmashPoint\\SmashPoint\\wwwroot\\img\\35.png",
+      "PackagePath": "staticwebassets\\img\\35.png"
+    },
+    {
+      "Id": "D:\\EscritorioAntiguo\\git\\SmashPoint\\SmashPoint\\SmashPoint\\wwwroot\\img\\36.png",
+      "PackagePath": "staticwebassets\\img\\36.png"
+    },
+    {
+      "Id": "D:\\EscritorioAntiguo\\git\\SmashPoint\\SmashPoint\\SmashPoint\\wwwroot\\img\\37.png",
+      "PackagePath": "staticwebassets\\img\\37.png"
+    },
+    {
+      "Id": "D:\\EscritorioAntiguo\\git\\SmashPoint\\SmashPoint\\SmashPoint\\wwwroot\\img\\38.png",
+      "PackagePath": "staticwebassets\\img\\38.png"
+    },
+    {
+      "Id": "D:\\EscritorioAntiguo\\git\\SmashPoint\\SmashPoint\\SmashPoint\\wwwroot\\img\\39.png",
+      "PackagePath": "staticwebassets\\img\\39.png"
+    },
+    {
+      "Id": "D:\\EscritorioAntiguo\\git\\SmashPoint\\SmashPoint\\SmashPoint\\wwwroot\\img\\40.png",
+      "PackagePath": "staticwebassets\\img\\40.png"
+    },
+    {
+      "Id": "D:\\EscritorioAntiguo\\git\\SmashPoint\\SmashPoint\\SmashPoint\\wwwroot\\img\\41.png",
+      "PackagePath": "staticwebassets\\img\\41.png"
+    },
+    {
+      "Id": "D:\\EscritorioAntiguo\\git\\SmashPoint\\SmashPoint\\SmashPoint\\wwwroot\\img\\42.png",
+      "PackagePath": "staticwebassets\\img\\42.png"
+    },
+    {
+      "Id": "D:\\EscritorioAntiguo\\git\\SmashPoint\\SmashPoint\\SmashPoint\\wwwroot\\img\\43.png",
+      "PackagePath": "staticwebassets\\img\\43.png"
+    },
+    {
+      "Id": "D:\\EscritorioAntiguo\\git\\SmashPoint\\SmashPoint\\SmashPoint\\wwwroot\\img\\44.png",
+      "PackagePath": "staticwebassets\\img\\44.png"
+    },
+    {
+      "Id": "D:\\EscritorioAntiguo\\git\\SmashPoint\\SmashPoint\\SmashPoint\\wwwroot\\img\\45.png",
+      "PackagePath": "staticwebassets\\img\\45.png"
+    },
+    {
+      "Id": "D:\\EscritorioAntiguo\\git\\SmashPoint\\SmashPoint\\SmashPoint\\wwwroot\\img\\46.png",
+      "PackagePath": "staticwebassets\\img\\46.png"
+    },
+    {
+      "Id": "D:\\EscritorioAntiguo\\git\\SmashPoint\\SmashPoint\\SmashPoint\\wwwroot\\img\\47.png",
+      "PackagePath": "staticwebassets\\img\\47.png"
+    },
+    {
+      "Id": "D:\\EscritorioAntiguo\\git\\SmashPoint\\SmashPoint\\SmashPoint\\wwwroot\\img\\48.png",
+      "PackagePath": "staticwebassets\\img\\48.png"
+    },
+    {
+      "Id": "D:\\EscritorioAntiguo\\git\\SmashPoint\\SmashPoint\\SmashPoint\\wwwroot\\img\\49.png",
+      "PackagePath": "staticwebassets\\img\\49.png"
+    },
+    {
+      "Id": "D:\\EscritorioAntiguo\\git\\SmashPoint\\SmashPoint\\SmashPoint\\wwwroot\\img\\50.png",
+      "PackagePath": "staticwebassets\\img\\50.png"
+    },
+    {
+      "Id": "D:\\EscritorioAntiguo\\git\\SmashPoint\\SmashPoint\\SmashPoint\\wwwroot\\img\\51.png",
+      "PackagePath": "staticwebassets\\img\\51.png"
+    },
+    {
+      "Id": "D:\\EscritorioAntiguo\\git\\SmashPoint\\SmashPoint\\SmashPoint\\wwwroot\\img\\52.png",
+      "PackagePath": "staticwebassets\\img\\52.png"
+    },
+    {
+      "Id": "D:\\EscritorioAntiguo\\git\\SmashPoint\\SmashPoint\\SmashPoint\\wwwroot\\img\\53.png",
+      "PackagePath": "staticwebassets\\img\\53.png"
+    },
+    {
+      "Id": "D:\\EscritorioAntiguo\\git\\SmashPoint\\SmashPoint\\SmashPoint\\wwwroot\\img\\54.png",
+      "PackagePath": "staticwebassets\\img\\54.png"
+    },
+    {
+      "Id": "D:\\EscritorioAntiguo\\git\\SmashPoint\\SmashPoint\\SmashPoint\\wwwroot\\img\\55.png",
+      "PackagePath": "staticwebassets\\img\\55.png"
+    },
+    {
+      "Id": "D:\\EscritorioAntiguo\\git\\SmashPoint\\SmashPoint\\SmashPoint\\wwwroot\\img\\56.png",
+      "PackagePath": "staticwebassets\\img\\56.png"
+    },
+    {
+      "Id": "D:\\EscritorioAntiguo\\git\\SmashPoint\\SmashPoint\\SmashPoint\\wwwroot\\img\\58.png",
+      "PackagePath": "staticwebassets\\img\\58.png"
+    },
+    {
+      "Id": "D:\\EscritorioAntiguo\\git\\SmashPoint\\SmashPoint\\SmashPoint\\wwwroot\\img\\59.png",
+      "PackagePath": "staticwebassets\\img\\59.png"
+    },
+    {
+      "Id": "D:\\EscritorioAntiguo\\git\\SmashPoint\\SmashPoint\\SmashPoint\\wwwroot\\img\\60.png",
+      "PackagePath": "staticwebassets\\img\\60.png"
+    },
+    {
+      "Id": "D:\\EscritorioAntiguo\\git\\SmashPoint\\SmashPoint\\SmashPoint\\wwwroot\\img\\61.png",
+      "PackagePath": "staticwebassets\\img\\61.png"
+    },
+    {
+      "Id": "D:\\EscritorioAntiguo\\git\\SmashPoint\\SmashPoint\\SmashPoint\\wwwroot\\img\\62.png",
+      "PackagePath": "staticwebassets\\img\\62.png"
+    },
+    {
+      "Id": "D:\\EscritorioAntiguo\\git\\SmashPoint\\SmashPoint\\SmashPoint\\wwwroot\\img\\63.png",
+      "PackagePath": "staticwebassets\\img\\63.png"
+    },
+    {
+      "Id": "D:\\EscritorioAntiguo\\git\\SmashPoint\\SmashPoint\\SmashPoint\\wwwroot\\img\\64.png",
+      "PackagePath": "staticwebassets\\img\\64.png"
+    },
+    {
+      "Id": "D:\\EscritorioAntiguo\\git\\SmashPoint\\SmashPoint\\SmashPoint\\wwwroot\\img\\65.png",
+      "PackagePath": "staticwebassets\\img\\65.png"
+    },
+    {
+      "Id": "D:\\EscritorioAntiguo\\git\\SmashPoint\\SmashPoint\\SmashPoint\\wwwroot\\img\\66.png",
+      "PackagePath": "staticwebassets\\img\\66.png"
+    },
+    {
+      "Id": "D:\\EscritorioAntiguo\\git\\SmashPoint\\SmashPoint\\SmashPoint\\wwwroot\\img\\67.png",
+      "PackagePath": "staticwebassets\\img\\67.png"
+    },
+    {
+      "Id": "D:\\EscritorioAntiguo\\git\\SmashPoint\\SmashPoint\\SmashPoint\\wwwroot\\img\\68.png",
+      "PackagePath": "staticwebassets\\img\\68.png"
+    },
+    {
+      "Id": "D:\\EscritorioAntiguo\\git\\SmashPoint\\SmashPoint\\SmashPoint\\wwwroot\\img\\69.png",
+      "PackagePath": "staticwebassets\\img\\69.png"
+    },
+    {
+      "Id": "D:\\EscritorioAntiguo\\git\\SmashPoint\\SmashPoint\\SmashPoint\\wwwroot\\img\\70.png",
+      "PackagePath": "staticwebassets\\img\\70.png"
+    },
+    {
+      "Id": "D:\\EscritorioAntiguo\\git\\SmashPoint\\SmashPoint\\SmashPoint\\wwwroot\\img\\71.png",
+      "PackagePath": "staticwebassets\\img\\71.png"
+    },
+    {
+      "Id": "D:\\EscritorioAntiguo\\git\\SmashPoint\\SmashPoint\\SmashPoint\\wwwroot\\img\\72.png",
+      "PackagePath": "staticwebassets\\img\\72.png"
+    },
+    {
+      "Id": "D:\\EscritorioAntiguo\\git\\SmashPoint\\SmashPoint\\SmashPoint\\wwwroot\\img\\73.png",
+      "PackagePath": "staticwebassets\\img\\73.png"
+    },
+    {
+      "Id": "D:\\EscritorioAntiguo\\git\\SmashPoint\\SmashPoint\\SmashPoint\\wwwroot\\img\\74.png",
+      "PackagePath": "staticwebassets\\img\\74.png"
+    },
+    {
+      "Id": "D:\\EscritorioAntiguo\\git\\SmashPoint\\SmashPoint\\SmashPoint\\wwwroot\\img\\75.png",
+      "PackagePath": "staticwebassets\\img\\75.png"
+    },
+    {
+      "Id": "D:\\EscritorioAntiguo\\git\\SmashPoint\\SmashPoint\\SmashPoint\\wwwroot\\img\\76.png",
+      "PackagePath": "staticwebassets\\img\\76.png"
+    },
+    {
+      "Id": "D:\\EscritorioAntiguo\\git\\SmashPoint\\SmashPoint\\SmashPoint\\wwwroot\\img\\78.png",
+      "PackagePath": "staticwebassets\\img\\78.png"
+    },
+    {
+      "Id": "D:\\EscritorioAntiguo\\git\\SmashPoint\\SmashPoint\\SmashPoint\\wwwroot\\img\\79.png",
+      "PackagePath": "staticwebassets\\img\\79.png"
+    },
+    {
+      "Id": "D:\\EscritorioAntiguo\\git\\SmashPoint\\SmashPoint\\SmashPoint\\wwwroot\\img\\80.png",
+      "PackagePath": "staticwebassets\\img\\80.png"
+    },
+    {
+      "Id": "D:\\EscritorioAntiguo\\git\\SmashPoint\\SmashPoint\\SmashPoint\\wwwroot\\img\\81.png",
+      "PackagePath": "staticwebassets\\img\\81.png"
+    },
+    {
+      "Id": "D:\\EscritorioAntiguo\\git\\SmashPoint\\SmashPoint\\SmashPoint\\wwwroot\\img\\P22.webp",
+      "PackagePath": "staticwebassets\\img\\P22.webp"
+    },
+    {
+      "Id": "D:\\EscritorioAntiguo\\git\\SmashPoint\\SmashPoint\\SmashPoint\\wwwroot\\img\\P23.jpeg",
+      "PackagePath": "staticwebassets\\img\\P23.jpeg"
+    },
+    {
+      "Id": "D:\\EscritorioAntiguo\\git\\SmashPoint\\SmashPoint\\SmashPoint\\wwwroot\\img\\P24.png",
+      "PackagePath": "staticwebassets\\img\\P24.png"
+    },
+    {
+      "Id": "D:\\EscritorioAntiguo\\git\\SmashPoint\\SmashPoint\\SmashPoint\\wwwroot\\img\\P25.jpeg",
+      "PackagePath": "staticwebassets\\img\\P25.jpeg"
+    },
+    {
+      "Id": "D:\\EscritorioAntiguo\\git\\SmashPoint\\SmashPoint\\SmashPoint\\wwwroot\\img\\P26.jpeg",
+      "PackagePath": "staticwebassets\\img\\P26.jpeg"
+    },
+    {
+      "Id": "D:\\EscritorioAntiguo\\git\\SmashPoint\\SmashPoint\\SmashPoint\\wwwroot\\img\\P27.png",
+      "PackagePath": "staticwebassets\\img\\P27.png"
+    },
+    {
+      "Id": "D:\\EscritorioAntiguo\\git\\SmashPoint\\SmashPoint\\SmashPoint\\wwwroot\\img\\carrito.png",
+      "PackagePath": "staticwebassets\\img\\carrito.png"
+    },
+    {
+      "Id": "D:\\EscritorioAntiguo\\git\\SmashPoint\\SmashPoint\\SmashPoint\\wwwroot\\img\\imagen-no-disponible.jpg",
+      "PackagePath": "staticwebassets\\img\\imagen-no-disponible.jpg"
+    },
+    {
+      "Id": "D:\\EscritorioAntiguo\\git\\SmashPoint\\SmashPoint\\SmashPoint\\wwwroot\\img\\logo.png",
+      "PackagePath": "staticwebassets\\img\\logo.png"
+    },
+    {
+      "Id": "D:\\EscritorioAntiguo\\git\\SmashPoint\\SmashPoint\\SmashPoint\\wwwroot\\img\\menu.png",
+      "PackagePath": "staticwebassets\\img\\menu.png"
+    },
+    {
+      "Id": "D:\\EscritorioAntiguo\\git\\SmashPoint\\SmashPoint\\SmashPoint\\wwwroot\\js\\site.js",
+      "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "D:\\EscritorioAntiguo\\git\\SmashPoint\\SmashPoint\\SmashPoint\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "PackagePath": "staticwebassets\\lib\\bootstrap"
+    },
+    {
+      "Id": "D:\\EscritorioAntiguo\\git\\SmashPoint\\SmashPoint\\SmashPoint\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
+    },
+    {
+      "Id": "D:\\EscritorioAntiguo\\git\\SmashPoint\\SmashPoint\\SmashPoint\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
+    },
+    {
+      "Id": "D:\\EscritorioAntiguo\\git\\SmashPoint\\SmashPoint\\SmashPoint\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
+    },
+    {
+      "Id": "D:\\EscritorioAntiguo\\git\\SmashPoint\\SmashPoint\\SmashPoint\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
+    },
+    {
+      "Id": "D:\\EscritorioAntiguo\\git\\SmashPoint\\SmashPoint\\SmashPoint\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
+    },
+    {
+      "Id": "D:\\EscritorioAntiguo\\git\\SmashPoint\\SmashPoint\\SmashPoint\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
+    },
+    {
+      "Id": "D:\\EscritorioAntiguo\\git\\SmashPoint\\SmashPoint\\SmashPoint\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
+    },
+    {
+      "Id": "D:\\EscritorioAntiguo\\git\\SmashPoint\\SmashPoint\\SmashPoint\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\EscritorioAntiguo\\git\\SmashPoint\\SmashPoint\\SmashPoint\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
+    },
+    {
+      "Id": "D:\\EscritorioAntiguo\\git\\SmashPoint\\SmashPoint\\SmashPoint\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
+    },
+    {
+      "Id": "D:\\EscritorioAntiguo\\git\\SmashPoint\\SmashPoint\\SmashPoint\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
+    },
+    {
+      "Id": "D:\\EscritorioAntiguo\\git\\SmashPoint\\SmashPoint\\SmashPoint\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
+    },
+    {
+      "Id": "D:\\EscritorioAntiguo\\git\\SmashPoint\\SmashPoint\\SmashPoint\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
+    },
+    {
+      "Id": "D:\\EscritorioAntiguo\\git\\SmashPoint\\SmashPoint\\SmashPoint\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
+    },
+    {
+      "Id": "D:\\EscritorioAntiguo\\git\\SmashPoint\\SmashPoint\\SmashPoint\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
+    },
+    {
+      "Id": "D:\\EscritorioAntiguo\\git\\SmashPoint\\SmashPoint\\SmashPoint\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\EscritorioAntiguo\\git\\SmashPoint\\SmashPoint\\SmashPoint\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
+    },
+    {
+      "Id": "D:\\EscritorioAntiguo\\git\\SmashPoint\\SmashPoint\\SmashPoint\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
+    },
+    {
+      "Id": "D:\\EscritorioAntiguo\\git\\SmashPoint\\SmashPoint\\SmashPoint\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
+    },
+    {
+      "Id": "D:\\EscritorioAntiguo\\git\\SmashPoint\\SmashPoint\\SmashPoint\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
+    },
+    {
+      "Id": "D:\\EscritorioAntiguo\\git\\SmashPoint\\SmashPoint\\SmashPoint\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
+    },
+    {
+      "Id": "D:\\EscritorioAntiguo\\git\\SmashPoint\\SmashPoint\\SmashPoint\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
+    },
+    {
+      "Id": "D:\\EscritorioAntiguo\\git\\SmashPoint\\SmashPoint\\SmashPoint\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
+    },
+    {
+      "Id": "D:\\EscritorioAntiguo\\git\\SmashPoint\\SmashPoint\\SmashPoint\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\EscritorioAntiguo\\git\\SmashPoint\\SmashPoint\\SmashPoint\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
+    },
+    {
+      "Id": "D:\\EscritorioAntiguo\\git\\SmashPoint\\SmashPoint\\SmashPoint\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
+    },
+    {
+      "Id": "D:\\EscritorioAntiguo\\git\\SmashPoint\\SmashPoint\\SmashPoint\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "D:\\EscritorioAntiguo\\git\\SmashPoint\\SmashPoint\\SmashPoint\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "D:\\EscritorioAntiguo\\git\\SmashPoint\\SmashPoint\\SmashPoint\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
+    },
+    {
+      "Id": "D:\\EscritorioAntiguo\\git\\SmashPoint\\SmashPoint\\SmashPoint\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
+    },
+    {
+      "Id": "D:\\EscritorioAntiguo\\git\\SmashPoint\\SmashPoint\\SmashPoint\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
+    },
+    {
+      "Id": "D:\\EscritorioAntiguo\\git\\SmashPoint\\SmashPoint\\SmashPoint\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\EscritorioAntiguo\\git\\SmashPoint\\SmashPoint\\SmashPoint\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
+    },
+    {
+      "Id": "D:\\EscritorioAntiguo\\git\\SmashPoint\\SmashPoint\\SmashPoint\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
+    },
+    {
+      "Id": "D:\\EscritorioAntiguo\\git\\SmashPoint\\SmashPoint\\SmashPoint\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "D:\\EscritorioAntiguo\\git\\SmashPoint\\SmashPoint\\SmashPoint\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
+    },
+    {
+      "Id": "D:\\EscritorioAntiguo\\git\\SmashPoint\\SmashPoint\\SmashPoint\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
+    },
+    {
+      "Id": "D:\\EscritorioAntiguo\\git\\SmashPoint\\SmashPoint\\SmashPoint\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
+    },
+    {
+      "Id": "D:\\EscritorioAntiguo\\git\\SmashPoint\\SmashPoint\\SmashPoint\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
+    },
+    {
+      "Id": "D:\\EscritorioAntiguo\\git\\SmashPoint\\SmashPoint\\SmashPoint\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
+    },
+    {
+      "Id": "D:\\EscritorioAntiguo\\git\\SmashPoint\\SmashPoint\\SmashPoint\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
+    },
+    {
+      "Id": "D:\\EscritorioAntiguo\\git\\SmashPoint\\SmashPoint\\SmashPoint\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
+    },
+    {
+      "Id": "D:\\EscritorioAntiguo\\git\\SmashPoint\\SmashPoint\\SmashPoint\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "D:\\EscritorioAntiguo\\git\\SmashPoint\\SmashPoint\\SmashPoint\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
+    },
+    {
+      "Id": "D:\\EscritorioAntiguo\\git\\SmashPoint\\SmashPoint\\SmashPoint\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Id": "D:\\EscritorioAntiguo\\git\\SmashPoint\\SmashPoint\\SmashPoint\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
+    },
+    {
+      "Id": "D:\\EscritorioAntiguo\\git\\SmashPoint\\SmashPoint\\SmashPoint\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
+    },
+    {
+      "Id": "D:\\EscritorioAntiguo\\git\\SmashPoint\\SmashPoint\\SmashPoint\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
+    },
+    {
+      "Id": "D:\\EscritorioAntiguo\\git\\SmashPoint\\SmashPoint\\SmashPoint\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
+    },
+    {
+      "Id": "D:\\EscritorioAntiguo\\git\\SmashPoint\\SmashPoint\\SmashPoint\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
+    },
+    {
+      "Id": "D:\\EscritorioAntiguo\\git\\SmashPoint\\SmashPoint\\SmashPoint\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
+    },
+    {
+      "Id": "D:\\EscritorioAntiguo\\git\\SmashPoint\\SmashPoint\\SmashPoint\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
+    },
+    {
+      "Id": "D:\\EscritorioAntiguo\\git\\SmashPoint\\SmashPoint\\SmashPoint\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
+    },
+    {
+      "Id": "D:\\EscritorioAntiguo\\git\\SmashPoint\\SmashPoint\\SmashPoint\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
+    },
+    {
+      "Id": "D:\\EscritorioAntiguo\\git\\SmashPoint\\SmashPoint\\SmashPoint\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
+    },
+    {
+      "Id": "D:\\EscritorioAntiguo\\git\\SmashPoint\\SmashPoint\\SmashPoint\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.SmashPoint.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.build.SmashPoint.props",
+      "PackagePath": "build\\SmashPoint.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildMultiTargeting.SmashPoint.props",
+      "PackagePath": "buildMultiTargeting\\SmashPoint.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildTransitive.SmashPoint.props",
+      "PackagePath": "buildTransitive\\SmashPoint.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

@@ -1,0 +1,80 @@
+﻿@model SmashPoint.Models.Cliente
+
+@{
+    ViewData["Title"] = "Mis Datos";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2 class="text-center mt-4 fst-italic">Mis Datos</h2>
+<hr style="height:4px;background-color: #FF5503; color: transparent;" class="col-1 mx-auto" >
+
+
+<div class="row">
+    <form asp-action="Index" enctype="multipart/form-data" class="col-lg-4 col-md-6 col-sm-10 bg-dark mx-auto" style="border-radius: 15px;">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <div class="form-group d-none">
+            <label asp-for="Id" class="control-label"></label>
+            <input asp-for="Id" class="form-control" value="@Model.Id" />
+            <span asp-validation-for="Id" class="text-danger"></span>
+        </div>
+        <div class="mb-3 row">
+            <label asp-for="Nombre" class="col-6 mx-auto text-center col-form-label text-light  fw-bold">NOMBRE</label>
+            <div class="col-12 row m-0 p-0">
+                <input asp-for="Nombre" type="text" value="@Model.Nombre" aria-required="true" class="mx-auto form-control w-75 border-0">
+            </div>
+            <span asp-validation-for="Nombre" class="text-danger text-center"></span>
+        </div>
+        <div class="mb-3 row">
+            <label asp-for="Email" class="col-6 mx-auto text-center col-form-label  text-light fw-bold">CORREO</label>
+            <div class="col-12 row m-0 p-0">
+                <input asp-for="Email" type="email" value="@Model.Email" disabled class="mx-auto  form-control w-75  border-0">
+            </div>
+            <span asp-validation-for="Email" class="text-danger text-center"></span>
+        </div>
+
+        <div class="mb-3 row">
+            <label asp-for="Telefono" class="col-6 mx-auto text-center col-form-label text-light  fw-bold">TELEFONO</label>
+            <div class="col-12 row m-0 p-0">
+                <input asp-for="Telefono" type="text" value="@Model.Telefono"  class="mx-auto  form-control w-50  border-0">
+            </div>
+            <span asp-validation-for="Telefono" class="text-danger text-center"></span>
+        </div>
+
+        <div class="mb-3 row">
+            <label asp-for="Direccion" class="col-6 mx-auto text-center col-form-label  text-light fw-bold">DIRECCION</label>
+            <div class="col-12 row m-0 p-0">
+                <input asp-for="Direccion" type="text" value="@Model.Direccion"  class="mx-auto  form-control w-50  border-0">
+            </div>
+            <span asp-validation-for="Direccion" class="text-danger text-center"></span>
+        </div>
+
+        <div class="mb-3 row">
+            <label asp-for="Poblacion" class="col-6 mx-auto text-center col-form-label text-light  fw-bold">POBLACION</label>
+            <div class="col-12 row m-0 p-0">
+                <input asp-for="Poblacion" type="text" value="@Model.Poblacion" class="mx-auto  form-control w-50 border-0">
+            </div>
+            <span asp-validation-for="Poblacion" class="text-danger text-center"></span>
+        </div>
+
+        <div class="mb-3 row">
+            <label asp-for="CodigoPostal" class="col-6 mx-auto text-center col-form-label text-light fw-bold">CODIGO POSTAL</label>
+            <div class="col-12 row m-0 p-0">
+                <input asp-for="CodigoPostal" type="text" value="@Model.CodigoPostal" class="mx-auto  form-control w-50 border-0">
+            </div>
+            <span asp-validation-for="CodigoPostal" class="text-danger text-center"></span>
+        </div>
+
+        <div class="mb-3 row">
+            <label asp-for="Nif" class="col-6 mx-auto text-center col-form-label text-light  fw-bold">DNI</label>
+            <div class="col-12 row m-0 p-0">
+                <input asp-for="Nif" type="text" value="@Model.Nif" class="mx-auto  form-control w-50  border-0">
+            </div>
+            <span asp-validation-for="Nif" class="text-danger text-center"></span>
+        </div>
+
+        <div class="col-lg-4 col-md-6 col-sm-10 mx-auto row mb-4">
+            <input type="submit" value="Guardar" class="text-center btn btn-light mx-auto" \>
+        </div>
+
+    </form>
+</div>

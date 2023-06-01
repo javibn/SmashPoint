@@ -1,0 +1,2 @@
+todos los proveedores tienen la contraseña: Nombre1234@
+Ejemplo Adidas -> Adidas1234@

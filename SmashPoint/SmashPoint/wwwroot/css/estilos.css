@@ -1,0 +1,104 @@
+﻿
+* {
+    box-sizing: border-box;
+}
+
+.row {
+    margin: 0px;
+    padding: 0px;
+}
+
+.accordion-button:focus {
+    background-color: white;
+    color: #FF5503;
+}
+
+.login ul{
+    border: 1px solid black;
+    border-radius: 20px;
+}
+
+header .nav-link {
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+    text-decoration: none;
+    color: #FF5503;
+}
+
+header .nav-link:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: #FF5503;
+    transition: left .8s;
+}
+
+header .nav-link:hover:after {
+    left: 0;
+}
+
+
+
+
+.botones {
+    padding-left: 0px;
+    padding-right: 0px;
+    color:white;
+    font-weight:bold;
+}
+
+.card{
+    height:400px;
+}
+
+
+.boton {
+    height: 40px;
+    padding-bottom: 10px;
+    position: absolute;
+    bottom: 6px;
+}
+
+
+.elegido {
+    border-bottom: 2px solid #FF5503;
+}
+
+header #navbarNav{
+    padding-left:2rem;
+}
+
+@media screen and (max-width: 1200px) {
+    .login ul {
+        border: 0px;
+    }
+
+    btn-carrito {
+        padding-bottom: 1rem;
+    }
+
+    #barraSeparacion {
+        display: none;
+    }
+    header #navbarNav {
+        padding-left: 0px;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    #titulos {
+        display: none;
+    }
+
+    
+}
+
+@media screen and (max-width: 767px) {
+    .botones {
+        font-size: 0.7rem;
+    }
+}

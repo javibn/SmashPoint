@@ -1,0 +1,84 @@
+﻿@model SmashPoint.Models.Proveedor
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<h2 class="text-center mt-4 fst-italic">Mis Datos</h2>
+<hr style="height:4px;background-color: #FF5503; color: transparent;" class="col-1 mx-auto">
+
+
+<div class="row">
+        <form asp-action="Create" method="post" enctype="multipart/form-data" class="col-lg-4 col-md-6 col-sm-10 mx-auto bg-dark" style="border-radius: 15px;">
+        <input type="hidden" asp-for="Id">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <div class="mb-3 row">
+            <label asp-for="Nombre" class="col-6 mx-auto text-center col-form-label  text-light fw-bold">Nombre</label>
+            <div class="col-12 row m-0 p-0">
+                <input asp-for="Nombre" type="text" aria-required="true" class="mx-auto  form-control w-50 border-0">
+            </div>
+            <span asp-validation-for="Nombre" class="text-danger text-center"></span>
+        </div>
+        <div class="mb-3 row mt-2">
+            
+            <div id="selectedBanner" class="col-lg-6 col-md-8 col-sm-10 mx-auto mb-3"></div>
+            <div class="col-12 row m-0 p-0">
+                <input type="file" asp-for="Imagen" class="mx-auto  form-control w-50  border-0">
+            </div>
+            <span span asp-validation-for="Imagen" class="text-danger text-center"></span>
+        </div>
+        <div class="mb-3 row">
+            <label asp-for="Telefono" class="col-6 mx-auto text-center col-form-label  text-light fw-bold">Telefono</label>
+            <div class="col-12 row m-0 p-0">
+                <input asp-for="Telefono" type="text"  aria-required="true" class="mx-auto  form-control w-50  border-0">
+            </div>
+            <span asp-validation-for="Telefono" class="text-danger text-center"></span>
+        </div>
+        <div class="mb-3 row">
+            <label asp-for="Direccion" class="col-6 mx-auto text-center col-form-label  text-light fw-bold">Direccion</label>
+            <div class="col-12 row m-0 p-0">
+                <input asp-for="Direccion" type="text"  aria-required="true" class="mx-auto  form-control w-50  border-0">
+            </div>
+            <span asp-validation-for="Direccion" class="text-danger text-center"></span>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-10 mx-auto row mb-4">
+            <input type="submit" value="Guardar" class="text-center btn btn-light text-black mx-auto" \>
+        </div>
+    </form>
+</div>
+
+<script>
+    // CARGAR IMAGEN SUBIDA
+    var selDiv = "";
+    var storedFiles = [];
+    $(document).ready(function () {
+        $("#Imagen").on("change", handleFileSelect);
+        selDiv = $("#selectedBanner");
+    });
+
+    function handleFileSelect(e) {
+        console.log("holaa")
+        var files = e.target.files;
+        var filesArr = Array.prototype.slice.call(files);
+        filesArr.forEach(function (f) {
+            if (!f.type.match("image.*")) {
+                return;
+            }
+            storedFiles.push(f);
+
+            var reader = new FileReader();
+            reader.onload = function (e) {
+                var html =
+                    '<img src="' +
+                    e.target.result +
+                    "\" data-file='" +
+                    f.name +
+                    "alt='Category Image' height='200px' width='200px'>";
+                selDiv.html(html);
+            };
+            reader.readAsDataURL(f);
+        });
+    }
+</script>

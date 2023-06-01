@@ -1,0 +1,85 @@
+﻿@model PaginatedList<SmashPoint.Models.Producto>
+@{
+    ViewData["Title"] = "Productos";
+}
+
+
+<h2 class="text-center fst-italic">MIS PRODUCTOS</h2>
+<hr style="height:4px;background-color: #FF5503; color: transparent;" class="col-1 mx-auto">
+
+<div>
+
+    <div class="container-md mt-4">
+        <div class="container-fluid row" id="titulos">
+            <h6 class="col-2 text-center">Image</h6>
+            <div class="col-10 row m-0 p-0">
+                <h6 class="col-2 text-center">Descripcion</h6>
+                <h6 class="col-2 text-center">Precio</h6>
+                <h6 class="col-2 text-center">Escaparate</h6>
+                <h6 class="col-2 text-center">Proveedor</h6>
+                <h6 class="col-1 text-center">Categoria</h6>
+                <h6 class="col-1 text-center">Stock</h6>
+            </div>
+        </div>
+
+        @foreach (var producto in Model)
+        {
+            <div class="container-fluid row  mb-4">
+                <div class="col-lg-2 col-sm-4 col-6 row m-0 p-0">
+                    <img src='/img/@producto.Imagen' class="col-9 mx-auto" style="object-fit:cover;">
+                </div>
+                <div class="col-lg-10 col-sm-8 col-6 row m-0 p-0 d-flex align-items-center">
+                    <div class="col-lg-2 col-12 row m-0 p-0">
+                        <p class="col-12 text-center fw-bold m-0">@producto.Descripcion</p>
+                        <p class="col-12 text-center">@producto.Texto</p>
+                    </div>
+                    <div class="col-lg-2 col-6 row m-0 p-0">
+                        <p class="col-12 text-center fw-bold m-0">@producto.Precio€</p>
+                    </div>
+                    <div class="col-lg-2 col-6 row m-0 p-0">
+                        @if (producto.Escaparate)
+                        {
+                            <p class="col-12 text-center fw-bold m-0 btn btn-success text-white">Incluido</p>
+                        }else{
+                            <p class="col-12 text-center fw-bold m-0 btn btn-danger text-white">No Incluido</p>
+                        }
+                    </div>
+                    <div class="col-lg-2 col-6  row m-0 p-0">
+                        <p class="col-12 text-center fw-bold m-0">@producto.Proveedor.Nombre</p>
+                    </div>
+                    <div class="col-lg-1 col-6  row m-0 p-0">
+                        <p class="col-12 text-center fw-bold m-0">@producto.Categoria.Descripcion</p>
+                    </div>
+                    <div class="col-lg-1 col-6  row m-0 p-0">
+                        <p class="col-12 text-center fw-bold m-0">@producto.Stock</p>
+                    </div>
+                    <div class="col-lg-2 col-6 mx-auto row m-0 p-0">
+                        <a asp-action="Eliminar" asp-route-id="@producto.Id" class="col-12 text-center fw-bold m-0 btn btn-danger">Eliminar Producto</a>
+                        <a asp-action="Edit" asp-route-id="@producto.Id" class="col-12 text-center fw-bold m-0 mt-1 btn btn-primary">Editar Producto</a>
+                        <a asp-action="CambiarImagen" asp-route-id="@producto.Id" class="col-12 text-center fw-bold m-0 mt-1 btn btn-info">Cambiar Imagen</a>
+                    </div>
+                </div>
+            </div>
+        }
+        @* Poner botones de página Siguiente y Anterior *@
+        @{
+            var prevDisabled = !Model.HasPreviousPage ? "disabled" : "";
+            var nextDisabled = !Model.HasNextPage ? "disabled" : "";
+        }
+        <div class="mx-auto mt-4 col-xl-2 col-lg-3 col-md-4 col-sm-5 col-6 h-auto" style="min-height:60px">
+            <a asp-action="Index" asp-route-pageNumber="@(Model.PageIndex - 1)"
+               class="float-start btn btn-outline-secondary @prevDisabled">
+                Anterior
+            </a>
+            <a asp-action="Index" asp-route-pageNumber="@(Model.PageIndex + 1)"
+               class="float-end btn btn-outline-secondary @nextDisabled">
+                Siguiente
+            </a>
+        </div>
+        <div class="container-fluid row mt-5">
+            <a asp-action="Create" class="mx-auto col-lg-4 col-md-6 col-sm-8 col-10 btn btn-dark">Subir Producto</a>
+        </div>
+        
+    </div>
+</div>
+

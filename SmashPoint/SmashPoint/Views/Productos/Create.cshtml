@@ -1,0 +1,137 @@
+﻿@model SmashPoint.Models.Producto
+
+
+<h2 class="text-center mt-4 fst-italic">Crear Producto</h2>
+<hr style="height:4px;background-color: #FF5503; color: transparent;" class="col-1 mx-auto">
+
+
+<div class="row">
+    <form asp-action="Create" method="post" enctype="multipart/form-data" class="col-lg-4 col-md-6 col-sm-10 mx-auto bg-dark" style="border-radius: 15px;">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        
+        <div class="mb-3 row">
+            <label asp-for="Descripcion" class="col-6 mx-auto text-center col-form-label  text-light fw-bold">Descripcion</label>
+            <div class="col-12 row m-0 p-0">
+                <input asp-for="Descripcion" type="text" aria-required="true" class="mx-auto form-control w-50  border-0">
+            </div>
+            <span asp-validation-for="Descripcion" class="text-danger text-center"></span>
+        </div>
+        <div class="mb-3 row">
+            <label asp-for="Texto" class="col-6 mx-auto text-center col-form-label  text-light fw-bold">Texto</label>
+            <div class="col-12 row m-0 p-0">
+                <input asp-for="Texto" type="text" aria-required="true" class="mx-auto form-control w-75  border-0">
+            </div>
+            <span asp-validation-for="Texto" class="text-danger text-center"></span>
+        </div>
+
+        <div class="mb-3 row">
+            <label asp-for="PrecioCadena" class="col-6 mx-auto text-center col-form-label  text-light fw-bold">Precio</label>
+            <div class="col-12 row m-0 p-0">
+                <input asp-for="PrecioCadena" type="text" aria-required="true" class="mx-auto form-control w-25  border-0">
+            </div>
+            <span asp-validation-for="PrecioCadena" class="text-danger text-center"></span>
+        </div>
+
+        <div class="mb-3 row">
+            <label asp-for="Stock" class="col-6 mx-auto text-center col-form-label  text-light fw-bold">Stock</label>
+            <div class="col-12 row m-0 p-0">
+                <input asp-for="Stock" min="0" aria-required="true" class="mx-auto form-control w-25  border-0">
+            </div>
+            <span asp-validation-for="Stock" class="text-danger text-center"></span>
+        </div>
+
+        <div class="mb-3 row">
+            <label asp-for="Escaparate" class="col-6 mx-auto text-center col-form-label  text-light fw-bold">Mostrar en Escaparate</label>
+            <div class="col-12 row m-0 p-0">
+                <div class="form-check mx-auto col-lg-3 col-6">
+                    <input asp-for="Escaparate" name="escaparate" type="radio" class=" form-check-input" value="true" />
+                    <label class="form-check-label text-light" for="flexRadioDefault1">
+                        Inluir
+                    </label>
+                </div>
+                <div class="form-check mx-auto col-lg-3 col-6">
+                    <input asp-for="Escaparate" name="escaparate" type="radio" class=" form-check-input" value="false" checked />
+                    <label class="form-check-label text-light" for="flexRadioDefault1">
+                        No Inluir
+                    </label>
+                </div>
+            </div>
+            <span asp-validation-for="Escaparate" class="text-danger text-center"></span>
+        </div>
+
+        <div class="mb-3 row mt-2">
+
+            <div id="selectedBanner" class="col-lg-6 col-md-8 col-sm-10 mx-auto mb-3">
+
+            </div>
+            <div class="col-12 row m-0 p-0">
+                <input type="file" asp-for="Imagen" class="mx-auto  form-control w-50  border-0">
+            </div>
+            <span span asp-validation-for="Imagen" class="text-danger text-center"></span>
+        </div>
+
+        <div class="mb-3 row">
+            <label asp-for="CategoriaId" class="col-6 mx-auto text-center col-form-label  text-light fw-bold">Categoria</label>
+            <div class="col-12 row m-0 p-0">
+                <select asp-for="CategoriaId" min="0" aria-required="true" class="mx-auto form-control w-25  border-0" asp-items="ViewBag.CategoriaId"></select>
+            </div>
+        </div>
+        @if (User.IsInRole("Administrador"))
+        {
+            <div class="mb-3 row">
+                <label asp-for="ProveedorId" class="col-6 mx-auto text-center col-form-label  text-light fw-bold">Proveedor</label>
+                <div class="col-12 row m-0 p-0">
+                        <select asp-for="ProveedorId" min="0" aria-required="true" class="mx-auto form-control w-25  border-0" asp-items="ViewBag.Proveedores"></select>
+                </div>
+            </div>
+        }
+        
+
+        <div class="col-lg-4 col-md-6 col-sm-10 mx-auto row mb-4">
+            <input type="submit" value="Crear" class="text-center btn btn-light  mx-auto" />
+        </div>
+
+    </form>
+</div>
+
+
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
+
+
+    <script>
+        // CARGAR IMAGEN SUBIDA
+        var selDiv = "";
+        var storedFiles = [];
+        $(document).ready(function () {
+            $("#Imagen").on("change", handleFileSelect);
+            selDiv = $("#selectedBanner");
+        });
+
+        function handleFileSelect(e) {
+            console.log("holaa")
+            var files = e.target.files;
+            var filesArr = Array.prototype.slice.call(files);
+            filesArr.forEach(function (f) {
+                if (!f.type.match("image.*")) {
+                    return;
+                }
+                storedFiles.push(f);
+
+                var reader = new FileReader();
+                reader.onload = function (e) {
+                    var html =
+                        '<img src="' +
+                        e.target.result +
+                        "\" data-file='" +
+                        f.name +
+                        "alt='Category Image' height='200px' width='200px'>";
+                    selDiv.html(html);
+                };
+                reader.readAsDataURL(f);
+            });
+        }
+    </script>

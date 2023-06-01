@@ -1,0 +1,107 @@
+﻿@*model IEnumerable<SmashPoint.Models.Pedido>*@
+@model PaginatedList<SmashPoint.Models.Pedido>
+
+@{
+    ViewData["Title"] = "Pedidos";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@if(User.IsInRole("Administrador")){
+    <h2 class="text-center fst-italic">PEDIDOS</h2>
+}else{
+    <h2 class="text-center fst-italic">MIS PEDIDOS</h2>
+}
+<hr style="height:4px;background-color: #FF5503; color: transparent;" class="col-1 mx-auto">
+
+<div class="accordion" id="accordionExample">
+        @foreach(var pedido in Model){
+            <div class="accordion-item">
+            @{
+                string idH = "heading" + pedido.Id;
+                string idC = "collapse" + pedido.Id;
+                string idC2 = "#" + idC;
+            }
+                <h2 class="accordion-header" id="@idH">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="@idC2" aria-expanded="false" aria-controls="@idC">
+                        @if(User.IsInRole("Usuario")){
+                            <h5 class="col-3 text-center">Pedido @pedido.Id</h5>
+                        }else{
+                            <h5 class="col-3 text-center">Cliente: @pedido.Cliente.Nombre</h5>
+                        }
+                        <h6 class="col-3 text-center">Fecha: @pedido.Fecha</h6>
+                        <h6 class="col-3 text-center">@pedido.PrecioTotal€</h6>
+                        <form class="col-2" asp-action="AnularPedido" asp-route-id="@pedido.Id">
+                        <h6 class="col-12 text-center btn text-uppercase botones @(pedido.EstadoActualId == 1 ? "btn-warning" : pedido.EstadoActualId == 2 ? "btn-success" : pedido.EstadoActualId == 3 ? "btn-primary" : pedido.EstadoActualId == 4 ? "btn-danger" : pedido.EstadoActualId == 5 ? "btn-info" : "")">@pedido.EstadoActual.Descripcion</h6>
+                            @if ((pedido.EstadoActualId == 1 && User.IsInRole("Usuario")) || pedido.EstadoActualId == 2)
+                            {
+                            <input type="submit" Con class="col-12 botones text-center fw-bold m-0 btn  text-uppercase btn-danger mt-3" value="Anular">
+                            }
+                        </form>
+                    </button>
+                </h2>
+                <div id="@idC" class="accordion-collapse collapse" aria-labelledby="@idH" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        @foreach(var detalle in pedido.Detalles){
+                        <div class="container-fluid row">
+                            <div class="col-lg-2 col-sm-4 col-6 row m-0 p-0">
+                                <img src='/img/@detalle.Producto.Imagen' class="col-9 mx-auto" style="object-fit:cover;">
+                            </div>
+                            <div class="col-lg-10 col-sm-8 col-6 row m-0 p-0 d-flex align-items-center">
+                                <div class="col-lg-2 col-12 row m-0 p-0">
+                                    <p class="col-12 text-center fw-bold m-0">@detalle.Producto.Descripcion</p>
+                                    <p class="col-12 text-center">@detalle.Producto.Texto</p>
+                                </div>
+                                <div class="col-lg-2 col-6 row m-0 p-0">
+                                    <p class="col-12 text-center fw-bold m-0">Precio/Unidad: @detalle.Producto.Precio€</p>
+                                </div>
+                                <div class="col-lg-2 col-6 row m-0 p-0">
+                                    <p class="col-12 text-center fw-bold m-0">Precio/Total: @detalle.Precio€</p>
+                                </div>
+                                <form class="col-lg-2 col-6 row m-0 p-0">
+                                    <div class="col-10 row mx-auto">
+                                        <p type="text" class="border-0 text-center fw-bold">Cantidad: @detalle.Cantidad</p>
+                                    </div>
+                                </form>
+                                
+                                <div class="col-lg-1 col-6  row m-0 p-0">
+                                    <p class="col-12 text-center fw-bold m-0">@detalle.Producto.Categoria.Descripcion</p>
+                                </div>
+                                @{
+                                    var estadoDetalle = detalle.EstadoDetalles.OrderByDescending(e => e.EstadoId).FirstOrDefault();
+                                }
+                                <form asp-action="SubirEstadoDetalle" asp-route-id="@detalle.Id" class="col-lg-2 col-12 mx-auto row m-0 p-0 offset-lg-1 offset-6 ">
+                                    <a class="col-12 text-center fw-bold m-0 btn  text-uppercase @(estadoDetalle.EstadoId == 1 ? "btn-warning" : estadoDetalle.EstadoId == 2 ? "btn-success" : estadoDetalle.EstadoId == 3 ? "btn-primary" : estadoDetalle.EstadoId == 4 ? "btn-danger" : estadoDetalle.EstadoId == 5 ? "btn-info" : "")">@estadoDetalle.Estado.Descripcion</a>
+                                    @if (User.IsInRole("Gestor") || User.IsInRole("Administrador")){
+                                        @if (estadoDetalle.EstadoId == 2)
+                                        {
+                                            <input type="submit" class="col-12 text-center fw-bold m-0 btn text-white text-uppercase btn-primary mt-3 fs-6" value="Enviado">
+                                        }
+                                        else if (estadoDetalle.EstadoId == 3)
+                                        {
+                                            <input type="submit" class="col-12 text-center fw-bold m-0 btn text-white text-uppercase btn-info mt-3 fs-6" value="Entregado">
+                                        }
+                                    }
+                                </form>
+                            </div>
+                        </div>
+                    }
+                    </div>
+                </div>
+            </div>
+        }
+</div>
+@* Poner botones de página Siguiente y Anterior *@
+@{
+    var prevDisabled = !Model.HasPreviousPage ? "disabled" : "";
+    var nextDisabled = !Model.HasNextPage ? "disabled" : "";
+}
+<div class="mx-auto mt-4 col-xl-2 col-lg-3 col-md-4 col-sm-5 col-6 h-auto" style="min-height:60px">
+    <a asp-action="Index" asp-route-pageNumber="@(Model.PageIndex - 1)"
+       class="float-start btn btn-outline-secondary @prevDisabled">
+        Anterior
+    </a>
+    <a asp-action="Index" asp-route-pageNumber="@(Model.PageIndex + 1)"
+       class="float-end btn btn-outline-secondary @nextDisabled">
+        Siguiente
+    </a>
+</div>

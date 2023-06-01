@@ -1,0 +1,103 @@
+﻿
+@model SmashPoint.Models.Producto
+
+@{
+    ViewData["Title"] = "Escaparate";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2 class="text-center fst-italic">Editar Producto</h2>
+<hr style="height:4px;background-color: #FF5503; color: transparent;" class="col-1 mx-auto">
+<div class="row">
+    <div class="form-group" hidden>
+        <label asp-for="Id" class="control-label"></label>
+        <input asp-for="Id" class="form-control" />
+    </div>
+    <div id="selectedBanner" class="col-lg-5 offset-lg-1 col-12 offset-0" style="border: 2px solid #FF5503;">
+        <img src="/img/@Model.Imagen" class="h-100 w-100" asp-append-version="true" />
+    </div>
+    <div class="col-lg-5 col-12 bg-dark d-flex align-items-center p-3">
+        <div class="mx-auto">
+            <form asp-action="Edit">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <input type="hidden" asp-for="Id" />
+                <div class="form-group">
+                    <label asp-for="Descripcion" class="control-label text-light"></label>
+                    <input asp-for="Descripcion" class="form-control" />
+                    <span asp-validation-for="Descripcion" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Texto" class="control-label text-light"></label>
+                    <input asp-for="Texto" class="form-control" />
+                    <span asp-validation-for="Texto" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Precio" class="control-label text-light"></label>
+                    <input asp-for="PrecioCadena" class="form-control" />
+                    <span asp-validation-for="PrecioCadena" class="text-danger"></span>
+                </div>
+                <div class="form-group" hidden>
+                    <label asp-for="Imagen" class="control-label text-light"></label>
+                    <input asp-for="Imagen" class="form-control" />
+                    <span asp-validation-for="Imagen" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Stock" class="control-label text-light"></label>
+                    <input asp-for="Stock" class="form-control" />
+                    <span asp-validation-for="Stock" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Escaparate" class="control-label text-light"></label>
+                    <div class="col-12 row m-0 p-0">
+                        <div class="form-check mx-auto col-lg-3 col-6">
+                            <input asp-for="Escaparate" name="escaparate" type="radio" class=" form-check-input" value="true" />
+                            <label class="form-check-label text-light" for="flexRadioDefault1">
+                                Inluir
+                            </label>
+                        </div>
+                        <div class="form-check mx-auto col-lg-3 col-6">
+                            <input asp-for="Escaparate" name="escaparate"  type="radio" class=" form-check-input" value="false" />
+                            <label class="form-check-label text-light" for="flexRadioDefault1">
+                                No Inluir
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Categoria" class="control-label text-light"></label>
+                    <select asp-for="CategoriaId" class="form-control" asp-items="ViewBag.CategoriaId"></select>
+                    <span asp-validation-for="CategoriaId" class="text-danger"></span>
+                </div>
+                @if (User.IsInRole("Administrador"))
+                {
+                    <div class="form-group">
+                        <label asp-for="Proveedor" class="control-label text-light"></label>
+                        <select asp-for="ProveedorId" class="form-control" asp-items="ViewBag.ProveedorId"></select>
+                        <span asp-validation-for="ProveedorId" class="text-danger"></span>
+                    </div>
+                }
+                else
+                {
+                    <div class="form-group" hidden>
+                        <label asp-for="Proveedor" class="control-label text-light"></label>
+                        <select asp-for="ProveedorId" class="form-control" asp-items="ViewBag.ProveedorId"></select>
+                        <span asp-validation-for="ProveedorId" class="text-danger"></span>
+                    </div>
+                }
+                <div class="form-group col-12 row">
+                    <input type="submit" value="GUARDAR" class="btn btn-light mx-auto mt-4" />
+                    <a asp-action="CambiarImagen" asp-route-id="@Model.Id" class="mt-3 btn btn-dark mx-auto border border-light">CAMBIAR IMAGEN</a>
+                </div>
+
+                
+            </form>
+        </div>
+    </div>
+</div>
+
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

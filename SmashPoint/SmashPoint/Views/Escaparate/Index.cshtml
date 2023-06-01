@@ -1,0 +1,119 @@
+﻿@*@model IEnumerable<SmashPoint.Models.Producto>*@
+@model PaginatedList<SmashPoint.Models.Producto>
+@{
+    ViewData["Title"] = "Escaparate";
+}
+
+
+<h2 class="text-center mt-4 fst-italic">BROWSE ALL DESIGNS</h2>
+<hr style="height:4px;background-color: #FF5503; color: transparent;" class="col-1 mx-auto">
+
+<nav class="navbar navbar-expand-md bg-dark container">
+    <a class="navbar-brand text-white text-uppercase" style="display: none;" href="#">Categorias</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav1" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <img src="/img/menu.png" style="height:25px;" />
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav1">
+        <ul class="navbar-nav mx-auto">
+            <li class="nav-item">
+                <a asp-action="Index" asp-controller="Escaparate" asp-route-id="null" class="nav-link text-white text-center text-uppercase @(ViewData["TituloEscaparate"] == "Escaparate" ? "elegido" : "")">Escaparate</a>
+            </li>
+            @foreach (var categoria in ViewBag.Categorias)
+            {
+                <li class="nav-item">
+                    <a asp-action="Index" asp-controller="Escaparate" asp-route-id="@categoria.Id" class="nav-link text-white text-center text-uppercase @(ViewData["TituloEscaparate"] == categoria.Descripcion ? "elegido" : "")">@categoria.Descripcion</a>
+                </li>
+            }
+        </ul>
+    </div>
+</nav>
+
+<div class="d-flex align-items-center container flex-wrap pb-2">
+    @foreach (var producto in Model)
+    {
+        bool dentro = false;
+        int cantidad = 0;
+
+        foreach (var detalle in ViewBag.Carrito)
+        {
+            if (detalle.ProductoId==producto.Id)
+            {
+                dentro = true;
+                cantidad = detalle.Cantidad;
+            }
+        }
+
+        <div class="card mt-4 mx-auto p-2 pb-4" style="width: 13rem; margin-right: 5rem;">
+            <img src='/img/@producto.Imagen' class="card-img-top">
+            <div class="card-body row">
+                <h5 class="card-title text-center">@producto.Descripcion</h5>
+                <p class="card-text text-center mb-1">@producto.PrecioCadena€</p>
+                <p class="card-text text-center mb-1 col-6">@producto.Proveedor.Nombre</p>
+                <p class="card-text text-center mb-2 col-6">Stock @producto.Stock</p>
+                @if (User.IsInRole("Usuario") || !User.Identity.IsAuthenticated)
+                {
+                    @if (dentro)
+                    {
+                        <form asp-action="ActualizarCantidad" asp-route-id="@producto.Id" class="col-11 mx-auto row boton">
+                            @if (cantidad == 1)
+                            {
+                                <button class="btn col-3 btn-outline-secondary btn-dark text-light  border-0" type="submit" name="cantidad" value="-1">x</button>
+                            }
+                            else
+                            {
+                                <button class="btn col-3 btn-outline-secondary btn-dark text-light  border-0" type="submit" name="cantidad" value="-1">-</button>
+                            }
+                            <input type="text" class="border-0 col-6 text-center" value="@cantidad" readonly />
+                            @if (cantidad == producto.Stock)
+                            {
+                                <button class="btn btn-outline-secondary col-3 btn-dark text-light fw-bold border-0 " disabled type="submit" name="cantidad" value="+1">+</button>
+                            }
+                            else
+                            {
+                                <button class="btn btn-outline-secondary col-3 btn-dark text-light fw-bold border-0 " type="submit" name="cantidad" value="+1">+</button>
+                            }
+                            
+                        </form>
+                    }else
+                    {
+                        if (producto.Stock > 0)
+                        {
+                            <a asp-action="AgregarCarrito" asp-controller="Escaparate" asp-route-id="@producto.Id" class="boton btn btn-dark col-11 text-white">Añadir al carrito</a>
+                        }
+                        else
+                        {
+                            <a class="btn btn-dark col-11 text-white boton">Sin Stock</a>
+                        }
+                    }
+                }
+                else if (User.IsInRole("Gestor"))
+                {
+                    if (User.Identity.Name==producto.Proveedor.Correo)
+                    {
+                        <a asp-action="Edit" asp-controller="Productos" asp-route-id="@producto.Id" class="boton btn btn-dark col-11 text-white">Modificar Producto</a>
+                    }
+                }
+                else
+                {
+                    <a asp-action="Edit" asp-controller="Productos" asp-route-id="@producto.Id" class="boton btn btn-dark col-11 text-white">Modificar Producto</a>
+                }
+            </div>
+        </div>
+    }
+</div>
+
+@* Poner botones de página Siguiente y Anterior *@
+@{
+    var prevDisabled = !Model.HasPreviousPage ? "disabled" : "";
+    var nextDisabled = !Model.HasNextPage ? "disabled" : "";
+}
+<div class="mx-auto mt-4 col-xl-2 col-lg-3 col-md-4 col-sm-5 col-6 h-auto" style="min-height:60px">
+    <a asp-action="Index" asp-route-pageNumber="@(Model.PageIndex - 1)"
+       class="float-start btn btn-outline-secondary @prevDisabled">
+        Anterior
+    </a>
+    <a asp-action="Index" asp-route-pageNumber="@(Model.PageIndex + 1)"
+       class="float-end btn btn-outline-secondary @nextDisabled">
+        Siguiente
+    </a>
+</div>

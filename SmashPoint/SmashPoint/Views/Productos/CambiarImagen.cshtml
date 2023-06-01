@@ -1,0 +1,70 @@
+﻿@model SmashPoint.Models.Producto
+
+@{
+    ViewData["Title"] = "Escaparate";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2 class="text-center fst-italic">Cambiar imagen</h2>
+<hr style="height:4px;background-color: #FF5503; color: transparent;" class="col-1 mx-auto">
+<div class="row">
+    <div class="form-group" hidden>
+        <label asp-for="Id" class="control-label"></label>
+        <input asp-for="Id" class="form-control" />
+    </div>
+    <div id="selectedBanner" class="col-lg-5 offset-lg-1 col-12 offset-0" style="border: 2px solid #FF5503;">
+        <img src="/img/@Model.Imagen" class="h-100 w-100" asp-append-version="true" />
+    </div>
+    <div class="col-lg-5 col-12 bg-dark d-flex align-items-center p-3">
+        <div class="mx-auto">
+            <h2 class="text-light text-center">@Model.Descripcion</h2>
+            <h5 class="text-light text-center mt-4 col-10 mx-auto">@Model.Texto</h5>
+            <form class="mt-5 row" enctype="multipart/form-data" asp-action="CambiarImagen">
+                <div class="form-group col-12 row">
+                    <input type="file" asp-for="Imagen" class="form-control-file mx-auto col-7 text-light">
+                </div>
+                <div class="form-group mt-4 row">
+                    <input type="submit" value="Actualizar imagen" class="btn btn-light mx-auto" />
+                    <a asp-action="Edit" asp-route-id="@Model.Id" class="mt-3 btn btn-dark mx-auto border border-light">Ir a Editar</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+
+
+<script>
+    // CARGAR IMAGEN SUBIDA
+    var selDiv = "";
+    var storedFiles = [];
+    $(document).ready(function () {
+        $("#Imagen").on("change", handleFileSelect);
+        selDiv = $("#selectedBanner");
+    });
+
+    function handleFileSelect(e) {
+        console.log("holaa")
+        var files = e.target.files;
+        var filesArr = Array.prototype.slice.call(files);
+        filesArr.forEach(function (f) {
+            if (!f.type.match("image.*")) {
+                return;
+            }
+            storedFiles.push(f);
+
+            var reader = new FileReader();
+            reader.onload = function (e) {
+                var html =
+                    '<img src="' +
+                    e.target.result +
+                    "\" data-file='" +
+                    f.name +
+                    "alt='Category Image' class='h-100 w-100'>";
+                selDiv.html(html);
+            };
+            reader.readAsDataURL(f);
+        });
+    }
+</script>

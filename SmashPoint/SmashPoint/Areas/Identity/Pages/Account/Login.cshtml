@@ -1,0 +1,50 @@
+﻿@page
+@model LoginModel
+
+@{
+    ViewData["Title"] = "Log in";
+}
+
+<div class="row w-100">
+    <form id="account" method="post" class="col-xl-4 col-lg-6 col-md-8 col-sm-10 mx-auto bg-dark pt-5 pb-5" style="border-radius: 15px;">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <h4 class="text-center text-light">Inicia Sesion</h4>
+        <hr style="height:4px;background-color: #ffffff; color: transparent;" class="col-2 mx-auto">
+        <div class="mb-3 row">
+            <label asp-for="Input.Email" class="col-12 text-center col-form-label  text-light fw-bold">Email</label>
+            <div class="col-12 row m-0 p-0">
+                <input asp-for="Input.Email" type="email" autocomplete="Usuario" aria-required="true" class="mx-auto col-xl-6 col-md-8 col-lg-10 form-control w-75 border-0">
+            </div>
+            <span asp-validation-for="Input.Email" class="text-danger text-center"></span>
+        </div>
+
+        <div class="mb-3 row">
+            <label asp-for="Input.Password" class="col-12 text-center col-form-label text-light fw-bold">Contraseña</label>
+            <div class="col-12 row m-0 p-0">
+                <input asp-for="Input.Password" autocomplete="Contraseña Actual" aria-required="true" type="password" class="mx-auto form-control w-50 border-0">
+            </div>
+            <span asp-validation-for="Input.Password" class="text-danger text-center"></span>
+        </div>
+        <div>
+            <div class="checkbox">
+                <label asp-for="Input.RememberMe" class="form-label row">
+                    <input class="form-check-input mx-auto col-2" asp-for="Input.RememberMe" />
+                    <p class="text-light text-center">@Html.DisplayNameFor(m => m.Input.RememberMe)</p>
+                </label>
+            </div>
+        </div>
+
+        <div class="mb-4 mt-4 row">
+            <button id="login-submit" type="submit" class="col-8 mx-auto btn btn-dark border-light text-light">Iniciar Sesion</button>
+        </div>
+
+        <div class="col-12 row">
+            <a asp-page="./Register" asp-route-returnUrl="@Model.ReturnUrl" class="text-center text-decoration-none text-white col mx-auto">¿No tienes cuenta?<br />Registrate</a>
+        </div>
+
+    </form>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

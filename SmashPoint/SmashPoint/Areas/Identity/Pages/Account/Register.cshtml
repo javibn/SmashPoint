@@ -1,0 +1,53 @@
+﻿@page
+@model RegisterModel
+@{
+    ViewData["Title"] = "Register";
+}
+
+<form id="registerForm" asp-route-returnUrl="@Model.ReturnUrl" method="post">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <div class="row w-100">
+            <div class="col-xl-4 col-lg-6 col-md-8 col-sm-10 mx-auto bg-dark pt-5 pb-5" style="border-radius: 15px;">
+                <h4 class="text-center text-light">Registrarse</h4>
+                <hr style="height:4px;background-color: #ffffff; color: transparent;" class="col-2 mx-auto">
+                <div class="mb-3 row">
+                    <label asp-for="Input.Email" class="col-12 text-center col-form-label  text-light fw-bold"></label>
+                    <div class="col-12 row m-0 p-0">
+                        <input asp-for="Input.Email" type="email" class="mx-auto form-control w-75 border-0" autocomplete="username" aria-required="true">
+                    </div>
+                    <span asp-validation-for="Input.Email" class="text-danger"></span>
+                </div>
+                <div class="mb-3 row">
+                    <label asp-for="Input.Nombre" class="col-12 text-center col-form-label text-light fw-bold"></label>
+                    <div class="col-12 row m-0 p-0">
+                        <input asp-for="Input.Nombre" type="text" class="mx-auto form-control w-50 border-0">
+                    </div>
+                    <span asp-validation-for="Input.Nombre" class="text-danger text-center"></span>
+                </div>
+                <div class="mb-3 row p-0 m-0">
+                    <label asp-for="Input.Password" class="col-12 text-center col-form-label text-light fw-bold"></label>
+                    <div class="col-12 row m-0 p-0">
+                        <input asp-for="Input.Password" type="password" class="mx-auto form-control w-50 border-0" autocomplete="new-password" aria-required="true">
+                    </div>
+                <span asp-validation-for="Input.Password" class="text-danger text-center"></span>
+                </div>
+
+                <div class="mb-4 row p-0 m-0">
+                    <label asp-for="Input.ConfirmPassword" class="col-12 text-center col-form-label text-light fw-bold"></label>
+                    <div class="col-12 row m-0 p-0">
+                        <input asp-for="Input.ConfirmPassword" type="password" class="mx-auto form-control w-50 border-0" autocomplete="new-password" aria-required="true">
+                    </div>
+                <span asp-validation-for="Input.ConfirmPassword" class="text-danger text-center"></span>
+                </div>
+
+                <div class="mb-3 row">
+                    <button id="registerSubmit" type="submit" class="col-8 mx-auto btn btn-dark border-light text-light" >Registrarse</button>
+                </div>
+                
+            </div>
+        </div>
+</form>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

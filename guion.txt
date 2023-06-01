@@ -1,0 +1,29 @@
+1. Ver que no puede comprar alguien no reg.
+2. Registrar cliente
+3. Cambiar datos cliente
+4. Carrito vacío
+5. Intentar meterse en el carrito
+6. Añadir productos
+7. Ir al carrito
+8. Añadir cantidad
+9. Aplicar descuento
+10. Confirmar pedido
+11. Ir a mis pedidos
+12. Detalles del pedido confirmado
+13. Añadir productos 
+14. Ir a mis pedidos
+15. Anular pedido
+16. Añadir productos 
+17. Salir
+18. Meterse en un proveedor
+19. Ir a pedidos
+20. Enviar pedido confirmado
+21. Entregar pedido enviado
+22. Crear producto
+23. Comprobar que se ha creado el producto
+24. Eliminar producto CUIDADO
+25. entrar en el administrado
+26. enseñar todo
+27. dar de alta un proveedor
+28. entrar como ese proveedor nuevo
+29. crear productos
